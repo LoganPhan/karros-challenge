@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!-- Added the entity metadata -->
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="clobType" value="longvarchar" dbms="h2"/>
+
+    <changeSet id="20200624190519-1" author="loganPhan">
+        <createTable tableName="metadata">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="desc" type="${clobType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="author" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="link_href" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="link_text" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="time" type="timestamp"/>
+            <column name="gps_id" type="bigint">
+                <constraints nullable="false" foreignKeyName="fk_metadata_gps" references="metadata(id)"/>
+            </column>
+
+            <column name="created_date" type="timestamp" defaultValueDate="${now}"/>
+            <column name="last_modified_date" type="timestamp" defaultValueDate="${now}"/>
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
