@@ -1,0 +1,45 @@
+
+* {
+  font-family: "Helvetica";
+}
+body{
+  overflow: hidden;
+}
+button{
+  box-shadow: unset!important;
+  outline: unset!important;
+  background-color: #FF0079!important;
+  border: unset!important;
+  font-size: 0.8em!important;
+  color: #fff!important;
+}
+button:active,
+button:hover,
+button:focus{
+      outline: unset!important;
+}
+i{
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
+.start-icon{
+  background-image: url(/assets/icons/star.png)
+}
+.start-half-icon{
+  background-image: url(/assets/icons/star-half.png)
+}
+.start-less-icon{
+  background-image: url(/assets/icons/star-less.png)
+}
+.search-icon{
+  background-image: url(/assets/icons/search-icon.png);
+}
+.collection-icon{
+  background-image: url(/assets/icons/collection-icon.png);
+}
+.list-icon{
+  background-image: url(/assets/icons/list-icon.png);
+}

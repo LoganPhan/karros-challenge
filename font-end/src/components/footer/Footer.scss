@@ -1,0 +1,58 @@
+@import "../../styles/variable.scss";
+footer{
+    overflow: hidden;
+    .row{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-left: 1em;
+        padding-right: 1em;
+        .left-box{
+            font-weight: 500;
+            font-size: 1.1em;
+            color: $color-light-black;
+            padding-left: 0;
+        }
+        .right-box{
+            justify-content: flex-end;
+            display: flex;
+            span{
+                color: $color-dark-grey;
+                text-decoration: unset;
+                padding-left: 1.3em;
+                font-weight: 400;
+            }
+        }
+        &:nth-child(2){
+            border-top: 1px solid $color-dark-grey;
+            .left-box{
+                color: $color-dark-grey;
+                font-weight: unset;
+                font-size: 0.8em;
+            }
+            .right-box{
+                justify-content: flex-end;
+                display: flex;
+                i{
+                    width: 25px;
+                    height: 25px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-left: 1em;
+                    &.fa-icon{
+                      background-image: url(/assets/icons/fa-icon.png);
+                    }
+                    &.pin-icon{
+                        background-image: url(/assets/icons/pin-icon.png);
+                    }
+                    &.tw-icon{
+                        background-image: url(/assets/icons/tw-icon.png);
+                    }
+                    &.in-icon{
+                        background-image: url(/assets/icons/in-icon.png);
+                    }
+                }
+            }
+        }
+        
+    }
+}

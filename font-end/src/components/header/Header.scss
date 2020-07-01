@@ -1,0 +1,173 @@
+@import "../../styles/variable.scss";
+header{
+    transform: translate3d(0,0,0);
+}
+.header-top{
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    .title{
+        padding-left: calc(100% - 95%);
+        color: $color-white;
+        font-size: 1.3em;
+        padding-top: 1em;
+    }
+    .group-button-login{
+        padding-right: 6em;
+        display: flex;
+        justify-content: center;
+        .search-icon{
+            align-self: center;
+        }
+      
+        .login-btn{
+            background-color: unset!important;
+            text-decoration: unset;
+            color: $color-white;
+            padding-right: 2em;
+            padding-left: 2em;
+            &:hover{
+                background-color: unset;
+            }
+        }
+        .sign-up-btn{
+            padding: 0.7em 1.8em;
+            &:active,
+            &:hover,
+            &:focus{
+                border-color: $color-pink;
+                background-color: $color-pink;
+                outline: unset;
+                box-shadow: unset;
+            }
+        }
+
+    }
+}
+.header-bottom{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    align-items: normal;
+    justify-content: space-between;
+    z-index: 18;
+    width: 100%;
+    .bottom-left{
+        flex-direction: column;
+        padding-left: calc(100% - 95%);
+        .genres{
+            font-size: .8em;
+            span{
+                padding-right: 1em;
+                color: $color-dark-grey;
+            }
+        }
+        h3{
+            color: $color-white;
+            font-family: serif;
+            font-weight: bold;
+        }
+        .padding-bottom-2em{
+            padding-bottom: calc(100% - 98%);
+            align-items: center;
+            color: $color-dark-grey;
+            button{
+                padding:0.8em 1.5em;
+                margin-right: 1em;
+                &.watch-btn{
+                    margin-right: 1.5em;
+                }
+                &.view-btn{
+                    background-color: unset!important;
+                    border: 1px solid white!important;
+                    padding-left: 1.7em;
+                    padding-right: 1.7em;
+                    background-color: unset;
+                    border: 1px solid $color-white!important;
+                }
+            }
+        }
+    }
+    .bottom-right{
+        flex-direction: column;
+        justify-content: center;
+        section{
+            border: 1px solid $color-dark-grey;
+            display: flex;
+            margin-right: 6em;
+            padding-left: 1em;
+            padding-right: 1em;
+            flex-direction: column;
+            border-radius: 5px;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            color: $color-dark-grey;
+            b{
+                color: $color-white;
+            }
+            .group-stars{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            span{
+                font-size: .9em;;
+                &.rating{
+                    margin-left: 2em;
+                    padding-left: 0.5em;
+                    padding-right: 0.5em;
+                    border: 1px solid $color-dark-grey;
+                    font-size: .8em;;
+                }
+            }
+        }
+    }
+    
+}
+
+.carousel{
+    .carousel-control-next,
+    .carousel-control-prev{
+        display: none;
+    }
+    .carousel-indicators{
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 40px;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        li{
+            border-radius: 2px;
+            margin: unset;
+            background-clip: unset;
+            opacity: unset;
+            width: 28px;
+            height: 10px;
+            border-bottom: unset;
+            border-top: unset;
+            margin-right: 5px;
+            margin-left: 5px;
+            background-color: $color-grey;
+            &.active{
+                background-color: $color-pink;
+            }
+        }
+    }
+    .carousel-inner{
+        .w-100{
+            max-height: 670px;
+        }
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.8) 90%);
+        z-index: 1;
+    }
+}
