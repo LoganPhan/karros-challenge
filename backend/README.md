@@ -17,7 +17,7 @@ This application is a simple web application with [Springboot](https://spring.io
 Service need to start-up by following command:
 ## Demo Application:
 > cd demo  
-> ./mvnw clean package  
+> mvn clean package  
 > java -jar demo/target/demo.0.0.1.SNAPSHOT.jar
 ![](https://serving.photos.photobox.com/22242737870f099147ff4c94cebab1500d0a669a3253117e17e468c33e04c2af0ad5ea80.jpg)
 # APIs
